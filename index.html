@@ -172,13 +172,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="内波原始方程组的近似："><a href="#内波原始方程组的近似：" class="headerlink" title="内波原始方程组的近似："></a>内波原始方程组的近似：</h1><hr>
+        <hr>
 <h3 id="1、原始方程"><a href="#1、原始方程" class="headerlink" title="1、原始方程"></a>1、原始方程</h3><script type="math/tex; mode=display">
 \begin{cases}
 \rho\frac{dx}{dt}+\rho \pmb{F}\times\pmb{u}+\nabla p-\rho\pmb{g}=\rho\pmb{R} \\
 \nabla\cdot\pmb{u}=0 \\
 \frac{d\rho}{dt}=0 \\
-\end{cases}</script><p>注意：一般的连续方程为 $ \frac{d\rho}{dt}+\rho\nabla\cdot\pmb{u}=0 $ ，在这里将这个方程化为了两个公式，即上式中的公式2和公式3。但是不难发现，可以利用公式2和公式3推得连续方程，但是不能反向推得，这里做了一步近似，近似认为处理内波时，可将连续方程化为上面的公式2、3。其中公式2称连续性方程，公式3称质量守恒方程。</p>
+\end{cases}</script><p>注意：一般的连续方程为 <script type="math/tex">\frac{d\rho}{dt}+\rho\nabla\cdot\pmb{u}=0</script> ，在这里将这个方程化为了两个公式，即上式中的公式2和公式3。但是不难发现，可以利用公式2和公式3推得连续方程，但是不能反向推得，这里做了一步近似，近似认为处理内波时，可将连续方程化为上面的公式2、3。其中公式2称连续性方程，公式3称质量守恒方程。</p>
 <h3 id="2、传统近似"><a href="#2、传统近似" class="headerlink" title="2、传统近似"></a>2、传统近似</h3><p>在上面原始公式的基础上，可以进行一步近似，先将上式展开为：</p>
 <script type="math/tex; mode=display">
 \begin{cases}
@@ -187,7 +187,7 @@
 \frac{dw}{dt}-\tilde{f}u_1+\frac{1}{\rho}\frac{\partial p}{\partial z}+g=R_3\\
 \nabla\cdot\pmb{u}=0 \\
 \frac{d\rho}{dt}=0 \\
-\end{cases}</script><p>将由于在上面的公式1中 $\tilde{f}w$ 项与 $fu_2$ 项相比过于小（水平与垂直流速量级差距过大），所以将 <script type="math/tex">\tilde{f}w</script> 项舍去。同时为了保证机械能守恒，需要将第3式中的 <script type="math/tex">\tilde{f}u_1</script> 舍去，即下面的传统近似形式：</p>
+\end{cases}</script><p>将由于在上面的公式1中 <script type="math/tex">\tilde{f}w</script> 项与 <script type="math/tex">fu_2</script> 项相比过于小（水平与垂直流速量级差距过大），所以将 <script type="math/tex">\tilde{f}w</script> 项舍去。同时为了保证机械能守恒，需要将第3式中的 <script type="math/tex">\tilde{f}u_1</script> 舍去，即下面的传统近似形式：</p>
 <script type="math/tex; mode=display">
 \begin{cases}
 \frac{du_1}{dt}-fu_2+\frac{1}{\rho}\frac{\partial p}{\partial x}=R_1 \\
@@ -567,5 +567,21 @@ MathJax.Hub.Queue(function() {
 
 </div>
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
