@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>内波原始方程组的近似 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="内波原始方程组的近似： 1、原始方程$$\begin{cases}\rho\frac{dx}{dt}+\rho \pmb{F}\times\pmb{u}+\nabla p-\rho\pmb{g}&#x3D;\rho\pmb{R} \\nabla\cdot\pmb{u}&#x3D;0 \\frac{d\rho}{dt}&#x3D;0 \\end{cases}$$ 注意：一般的连续方程为 $$ \frac{d\rho}{dt}+\">
+  <meta name="description" content="内波原始方程组的近似： 1、原始方程 \begin{cases} \rho\frac{dx}{dt}+\rho \pmb{F}\times\pmb{u}+\nabla p-\rho\pmb{g}&#x3D;\rho\pmb{R} \\ \nabla\cdot\pmb{u}&#x3D;0 \\ \frac{d\rho}{dt}&#x3D;0 \\ \end{cases}注意：一般的连续方程为 $ \frac{d\rho}{dt}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="内波原始方程组的近似">
 <meta property="og:url" content="http://yoursite.com/2020/10/13/%E5%86%85%E6%B3%A2%E5%8E%9F%E5%A7%8B%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%BF%91%E4%BC%BC/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="内波原始方程组的近似： 1、原始方程$$\begin{cases}\rho\frac{dx}{dt}+\rho \pmb{F}\times\pmb{u}+\nabla p-\rho\pmb{g}&#x3D;\rho\pmb{R} \\nabla\cdot\pmb{u}&#x3D;0 \\frac{d\rho}{dt}&#x3D;0 \\end{cases}$$ 注意：一般的连续方程为 $$ \frac{d\rho}{dt}+\">
+<meta property="og:description" content="内波原始方程组的近似： 1、原始方程 \begin{cases} \rho\frac{dx}{dt}+\rho \pmb{F}\times\pmb{u}+\nabla p-\rho\pmb{g}&#x3D;\rho\pmb{R} \\ \nabla\cdot\pmb{u}&#x3D;0 \\ \frac{d\rho}{dt}&#x3D;0 \\ \end{cases}注意：一般的连续方程为 $ \frac{d\rho}{dt}">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-13T05:42:35.257Z">
-<meta property="article:modified_time" content="2020-10-13T05:53:15.296Z">
+<meta property="article:modified_time" content="2020-10-13T06:50:31.014Z">
 <meta property="article:author" content="OceanEyes">
 <meta name="twitter:card" content="summary">
   
@@ -175,32 +175,90 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="内波原始方程组的近似："><a href="#内波原始方程组的近似：" class="headerlink" title="内波原始方程组的近似："></a>内波原始方程组的近似：</h1><hr>
-<h3 id="1、原始方程"><a href="#1、原始方程" class="headerlink" title="1、原始方程"></a>1、原始方程</h3><p>$$<br>\begin{cases}<br>\rho\frac{dx}{dt}+\rho \pmb{F}\times\pmb{u}+\nabla p-\rho\pmb{g}=\rho\pmb{R} \<br>\nabla\cdot\pmb{u}=0 \<br>\frac{d\rho}{dt}=0 \<br>\end{cases}<br>$$</p>
-<p>注意：一般的连续方程为 $$ \frac{d\rho}{dt}+\rho\nabla\cdot\pmb{u}=0 $$ ，在这里将这个方程化为了两个公式，即上式中的公式2和公式3。但是不难发现，可以利用公式2和公式3推得连续方程，但是不能反向推得，这里做了一步近似，近似认为处理内波时，可将连续方程化为上面的公式2、3。其中公式2称连续性方程，公式3称质量守恒方程。</p>
+<h3 id="1、原始方程"><a href="#1、原始方程" class="headerlink" title="1、原始方程"></a>1、原始方程</h3><script type="math/tex; mode=display">
+\begin{cases}
+\rho\frac{dx}{dt}+\rho \pmb{F}\times\pmb{u}+\nabla p-\rho\pmb{g}=\rho\pmb{R} \\
+\nabla\cdot\pmb{u}=0 \\
+\frac{d\rho}{dt}=0 \\
+\end{cases}</script><p>注意：一般的连续方程为 $ \frac{d\rho}{dt}+\rho\nabla\cdot\pmb{u}=0 $ ，在这里将这个方程化为了两个公式，即上式中的公式2和公式3。但是不难发现，可以利用公式2和公式3推得连续方程，但是不能反向推得，这里做了一步近似，近似认为处理内波时，可将连续方程化为上面的公式2、3。其中公式2称连续性方程，公式3称质量守恒方程。</p>
 <h3 id="2、传统近似"><a href="#2、传统近似" class="headerlink" title="2、传统近似"></a>2、传统近似</h3><p>在上面原始公式的基础上，可以进行一步近似，先将上式展开为：</p>
-<p>$$<br>\begin{cases}<br>\frac{du_1}{dt}-fu_2+\tilde{f}w+\frac{1}{\rho}\frac{\partial p}{\partial x}=R_1 \<br>\frac{du_2}{dt}+fu_1+\frac{1}{\rho}\frac{\partial p}{\partial y}=R_2\<br>\frac{dw}{dt}-\tilde{f}u_1+\frac{1}{\rho}\frac{\partial p}{\partial z}+g=R_3\<br>\nabla\cdot\pmb{u}=0 \<br>\frac{d\rho}{dt}=0 \<br>\end{cases}<br>$$</p>
-<p>将由于在上面的公式1中 $$\tilde{f}w$$ 项与 $$fu_2$$ 项相比过于小（水平与垂直流速量级差距过大），所以将 $$\tilde{f}w$$ 项舍去。同时为了保证机械能守恒，需要将第3式中的 $$\tilde{f}u_1$$ 舍去，即下面的传统近似形式：</p>
-<p>$$<br>\begin{cases}<br>\frac{du_1}{dt}-fu_2+\frac{1}{\rho}\frac{\partial p}{\partial x}=R_1 \<br>\frac{du_2}{dt}+fu_1+\frac{1}{\rho}\frac{\partial p}{\partial y}=R_2\<br>\frac{dw}{dt}+\frac{1}{\rho}\frac{\partial p}{\partial z}+g=R_3\<br>\nabla\cdot\pmb{u}=0 \<br>\frac{d\rho}{dt}=0 \<br>\end{cases}<br>$$</p>
-<p>但是这样会造成第3式中的 $$\tilde{f}u_1$$ 项与 $$\frac{dw}{dt}$$ 项相比并不明显小于的情况下被舍去，导致误差。</p>
-<p>注：将原始方程的x方向动量方程乘u，y方向动量方程乘v，z方向动量方程乘w相加后可以得到机械能守恒的式子（忽略了 $$\frac{\partial\rho}{\partial t}$$ 项）。如果单独去掉第一式中的一项，机械能不再守恒。</p>
-<h3 id="3、Boussinesq近似"><a href="#3、Boussinesq近似" class="headerlink" title="3、Boussinesq近似"></a>3、Boussinesq近似</h3><h4 id="（1）小扰动假定"><a href="#（1）小扰动假定" class="headerlink" title="（1）小扰动假定"></a>（1）小扰动假定</h4><p>在传统近似的基础上，将密度、压强场变量看成背景稳定层结造成的平均变量 $$\overline{\rho}(z)$$、$$\overline{p}(z)$$ ，以及由内波造成的微小变量 $$\rho’(x,y,z,t)$$、$$p’(x,y,z,t)$$ ，在将以上密度场和压强场带入后，控制方程组可以改变为：</p>
-<p>$$<br>\begin{cases}<br>\frac{du_1}{dt}-fu_2+\frac{1}{\overline{\rho}+\rho’}\frac{\partial p’}{\partial x}=R_1 \<br>\frac{du_2}{dt}+fu_1+\frac{1}{\overline{\rho}+\rho’}\frac{\partial p’}{\partial y}=R_2\<br>\frac{dw}{dt}+\frac{1}{\overline{\rho}+\rho’}\frac{\partial (\overline{p}+p’)}{\partial z}+g=R_3\<br>\nabla\cdot\pmb{u}=0 \<br>\frac{d\rho’}{dt}+w\frac{d\overline{\rho}}{dz}=0 \<br>\end{cases}<br>$$</p>
-<h4 id="（2）静压假定"><a href="#（2）静压假定" class="headerlink" title="（2）静压假定"></a>（2）静压假定</h4><p>假定海水中的密度层结与压强层结存在如下联系：$$\nabla\overline{p}(z)=\overline{\rho}(z)\vec{g}$$ ，那么当我们已知背景密度场时，我们就可以知道背景压强场。带入控制方程后，方程组可化为：</p>
-<p>$$<br>\begin{cases}<br>\frac{du_1}{dt}-fu_2+\frac{1}{\overline{\rho}+\rho’}\frac{\partial p’}{\partial x}=R_1 \<br>\frac{du_2}{dt}+fu_1+\frac{1}{\overline{\rho}+\rho’}\frac{\partial p’}{\partial y}=R_2\<br>\frac{dw}{dt}+\frac{1}{\overline{\rho}+\rho’}\frac{\partial p’}{\partial z}+\frac{\rho’}{\overline{\rho}}g=R_3\<br>\nabla\cdot\pmb{u}=0 \<br>\frac{d\rho’}{dt}+w\frac{d\overline{\rho}}{dz}=0 \<br>\end{cases}<br>$$</p>
-<h4 id="（3）自由对流假定"><a href="#（3）自由对流假定" class="headerlink" title="（3）自由对流假定"></a>（3）自由对流假定</h4><p>因为 $$\rho’$$ 与 $$\overline{\rho}$$ 相比过于小，所以当 $$\rho’$$ 与 $$\overline{\rho}$$ 同时出现时，可以省略其中的 $$\rho’$$ 项，方程组简化如下：</p>
-<p>$$<br>\begin{cases}<br>\frac{du_1}{dt}-fu_2+\frac{1}{\overline{\rho}}\frac{\partial p’}{\partial x}=R_1 \<br>\frac{du_2}{dt}+fu_1+\frac{1}{\overline{\rho}}\frac{\partial p’}{\partial y}=R_2\<br>\frac{dw}{dt}+\frac{1}{\overline{\rho}}\frac{\partial p’}{\partial z}+\frac{\rho’}{\overline{\rho}}g=R_3\<br>\nabla\cdot\pmb{u}=0 \<br>\frac{d\rho’}{dt}+w\frac{d\overline{\rho}}{dz}=0 \<br>\end{cases}<br>$$</p>
-<h4 id="（4）Boussinesq近似"><a href="#（4）Boussinesq近似" class="headerlink" title="（4）Boussinesq近似"></a>（4）Boussinesq近似</h4><p>海水背景密度场的变化 $$\overline{\rho}$$ 通常是很小的，可以使用常数代替。这个常数可以是海表密度 $$\rho_0$$ ，或是 $$\rho_*=\frac{1}{d}\int ^0_{-d}\overline{\rho}(z)dz$$ 。使用 $$\rho_0$$ 代替 $$\overline{\rho}$$ 的方程组如下：</p>
-<p>$$<br>\begin{cases}<br>\frac{du_1}{dt}-fu_2+\frac{1}{\rho_0}\frac{\partial p’}{\partial x}=R_1 \<br>\frac{du_2}{dt}+fu_1+\frac{1}{\rho_0}\frac{\partial p’}{\partial y}=R_2\<br>\frac{dw}{dt}+\frac{1}{\rho_0}\frac{\partial p’}{\partial z}+\frac{\rho’}{\overline{\rho}}g=R_3\<br>\nabla\cdot\pmb{u}=0 \<br>\frac{d\rho’}{dt}+w\frac{d\overline{\rho}}{dz}=0 \<br>\end{cases}<br>$$</p>
-<p>注：这里只能代替压强项上的 $$\overline{\rho}$$ 。</p>
-<p>在一般的文献中，很多将 $$\rho’$$、$$p’$$ 上的一撇去掉，最后经过整个Boussinesq近似过程的方程如下：</p>
-<p>$$<br>\begin{cases}<br>\frac{du_1}{dt}-fu_2+\frac{1}{\rho_0}\frac{\partial p}{\partial x}=R_1 \<br>\frac{du_2}{dt}+fu_1+\frac{1}{\rho_0}\frac{\partial p}{\partial y}=R_2\<br>\frac{dw}{dt}+\frac{1}{\rho_0}\frac{\partial p}{\partial z}+\frac{\rho}{\overline{\rho}}g=R_3\<br>\nabla\cdot\pmb{u}=0 \<br>\frac{d\rho}{dt}+w\frac{d\overline{\rho}}{dz}=0 \<br>\end{cases}<br>$$</p>
-<h3 id="3、线性近似"><a href="#3、线性近似" class="headerlink" title="3、线性近似"></a>3、线性近似</h3><p>在之前的假定下我们进一步假设，在 $$\frac{du}{dt}$$ 展开的散度项 $$\vec{u}\cdot\nabla u$$ 项中，u为内波造成的速度场，量级较小，与 $$\nabla u$$ 的乘积可以忽略，从而将方程线性化，得到简化方程如下：</p>
-<p>$$<br>\begin{cases}<br>\frac{\partial u_1}{\partial t}-fu_2+\frac{1}{\rho_0}\frac{\partial p}{\partial x}=R_1 \<br>\frac{\partial u_2}{\partial t}+fu_1+\frac{1}{\rho_0}\frac{\partial p}{\partial y}=R_2\<br>\frac{\partial w}{\partial t}+\frac{1}{\rho_0}\frac{\partial p}{\partial z}+\frac{\rho}{\overline{\rho}}g=R_3\<br>\nabla\cdot\pmb{u}=0 \<br>\frac{\partial\rho}{\partial t}+w\frac{d\overline{\rho}}{dz}=0 \<br>\end{cases}<br>$$</p>
-<ul>
-<li>特殊：在小扰动假定下我们将密度场和压强场看作背景场和内波扰动的叠加，所以在处理速度场是也可以做类似处理，只不过在之前的近似中，我们将背景流畅看作静止，速度完全由内波的扰动速度场组成。当考虑存在一个水平的背景速度场后，原速度变为 $$\vec{U}+\vec{u}=[U(z)+u(x,y,z,t)]\vec{i}+[V(z)+v(x,y,z,t)]\vec{j}+w(x,y,z,t)\vec{k}$$ ，带入上述方程，方程组变为如下形式（忽略科氏力）：</li>
+<script type="math/tex; mode=display">
+\begin{cases}
+\frac{du_1}{dt}-fu_2+\tilde{f}w+\frac{1}{\rho}\frac{\partial p}{\partial x}=R_1 \\
+\frac{du_2}{dt}+fu_1+\frac{1}{\rho}\frac{\partial p}{\partial y}=R_2\\
+\frac{dw}{dt}-\tilde{f}u_1+\frac{1}{\rho}\frac{\partial p}{\partial z}+g=R_3\\
+\nabla\cdot\pmb{u}=0 \\
+\frac{d\rho}{dt}=0 \\
+\end{cases}</script><p>将由于在上面的公式1中 $\tilde{f}w$ 项与 $fu_2$ 项相比过于小（水平与垂直流速量级差距过大），所以将 <script type="math/tex">\tilde{f}w</script> 项舍去。同时为了保证机械能守恒，需要将第3式中的 <script type="math/tex">\tilde{f}u_1</script> 舍去，即下面的传统近似形式：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\frac{du_1}{dt}-fu_2+\frac{1}{\rho}\frac{\partial p}{\partial x}=R_1 \\
+\frac{du_2}{dt}+fu_1+\frac{1}{\rho}\frac{\partial p}{\partial y}=R_2\\
+\frac{dw}{dt}+\frac{1}{\rho}\frac{\partial p}{\partial z}+g=R_3\\
+\nabla\cdot\pmb{u}=0 \\
+\frac{d\rho}{dt}=0 \\
+\end{cases}</script><p>但是这样会造成第3式中的 <script type="math/tex">\tilde{f}u_1</script> 项与 <script type="math/tex">\frac{dw}{dt}</script> 项相比并不明显小于的情况下被舍去，导致误差。</p>
+<p>注：将原始方程的x方向动量方程乘u，y方向动量方程乘v，z方向动量方程乘w相加后可以得到机械能守恒的式子（忽略了 <script type="math/tex">\frac{\partial\rho}{\partial t}</script> 项）。如果单独去掉第一式中的一项，机械能不再守恒。</p>
+<h3 id="3、Boussinesq近似"><a href="#3、Boussinesq近似" class="headerlink" title="3、Boussinesq近似"></a>3、Boussinesq近似</h3><h4 id="（1）小扰动假定"><a href="#（1）小扰动假定" class="headerlink" title="（1）小扰动假定"></a>（1）小扰动假定</h4><p>在传统近似的基础上，将密度、压强场变量看成背景稳定层结造成的平均变量 <script type="math/tex">\overline{\rho}(z)</script>、<script type="math/tex">\overline{p}(z)</script> ，以及由内波造成的微小变量 <script type="math/tex">\rho'(x,y,z,t)</script>、<script type="math/tex">p'(x,y,z,t)</script> ，在将以上密度场和压强场带入后，控制方程组可以改变为：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\frac{du_1}{dt}-fu_2+\frac{1}{\overline{\rho}+\rho'}\frac{\partial p'}{\partial x}=R_1 \\
+\frac{du_2}{dt}+fu_1+\frac{1}{\overline{\rho}+\rho'}\frac{\partial p'}{\partial y}=R_2\\
+\frac{dw}{dt}+\frac{1}{\overline{\rho}+\rho'}\frac{\partial (\overline{p}+p')}{\partial z}+g=R_3\\
+\nabla\cdot\pmb{u}=0 \\
+\frac{d\rho'}{dt}+w\frac{d\overline{\rho}}{dz}=0 \\
+\end{cases}</script><h4 id="（2）静压假定"><a href="#（2）静压假定" class="headerlink" title="（2）静压假定"></a>（2）静压假定</h4><p>假定海水中的密度层结与压强层结存在如下联系：<script type="math/tex">\nabla\overline{p}(z)=\overline{\rho}(z)\vec{g}</script> ，那么当我们已知背景密度场时，我们就可以知道背景压强场。带入控制方程后，方程组可化为：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\frac{du_1}{dt}-fu_2+\frac{1}{\overline{\rho}+\rho'}\frac{\partial p'}{\partial x}=R_1 \\
+\frac{du_2}{dt}+fu_1+\frac{1}{\overline{\rho}+\rho'}\frac{\partial p'}{\partial y}=R_2\\
+\frac{dw}{dt}+\frac{1}{\overline{\rho}+\rho'}\frac{\partial p'}{\partial z}+\frac{\rho'}{\overline{\rho}}g=R_3\\
+\nabla\cdot\pmb{u}=0 \\
+\frac{d\rho'}{dt}+w\frac{d\overline{\rho}}{dz}=0 \\
+\end{cases}</script><h4 id="（3）自由对流假定"><a href="#（3）自由对流假定" class="headerlink" title="（3）自由对流假定"></a>（3）自由对流假定</h4><p>因为 <script type="math/tex">\rho'</script> 与 <script type="math/tex">\overline{\rho}</script> 相比过于小，所以当 <script type="math/tex">\rho'</script> 与 <script type="math/tex">\overline{\rho}</script> 同时出现时，可以省略其中的 <script type="math/tex">\rho'</script> 项，方程组简化如下：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\frac{du_1}{dt}-fu_2+\frac{1}{\overline{\rho}}\frac{\partial p'}{\partial x}=R_1 \\
+\frac{du_2}{dt}+fu_1+\frac{1}{\overline{\rho}}\frac{\partial p'}{\partial y}=R_2\\
+\frac{dw}{dt}+\frac{1}{\overline{\rho}}\frac{\partial p'}{\partial z}+\frac{\rho'}{\overline{\rho}}g=R_3\\
+\nabla\cdot\pmb{u}=0 \\
+\frac{d\rho'}{dt}+w\frac{d\overline{\rho}}{dz}=0 \\
+\end{cases}</script><h4 id="（4）Boussinesq近似"><a href="#（4）Boussinesq近似" class="headerlink" title="（4）Boussinesq近似"></a>（4）Boussinesq近似</h4><p>海水背景密度场的变化 <script type="math/tex">\overline{\rho}</script> 通常是很小的，可以使用常数代替。这个常数可以是海表密度 <script type="math/tex">\rho_0</script> ，或是 <script type="math/tex">\rho_*=\frac{1}{d}\int ^0_{-d}\overline{\rho}(z)dz</script> 。使用 <script type="math/tex">\rho_0</script> 代替 <script type="math/tex">\overline{\rho}</script> 的方程组如下：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\frac{du_1}{dt}-fu_2+\frac{1}{\rho_0}\frac{\partial p'}{\partial x}=R_1 \\
+\frac{du_2}{dt}+fu_1+\frac{1}{\rho_0}\frac{\partial p'}{\partial y}=R_2\\
+\frac{dw}{dt}+\frac{1}{\rho_0}\frac{\partial p'}{\partial z}+\frac{\rho'}{\overline{\rho}}g=R_3\\
+\nabla\cdot\pmb{u}=0 \\
+\frac{d\rho'}{dt}+w\frac{d\overline{\rho}}{dz}=0 \\
+\end{cases}</script><p>注：这里只能代替压强项上的 <script type="math/tex">\overline{\rho}</script> 。</p>
+<p>在一般的文献中，很多将 <script type="math/tex">\rho'</script>、<script type="math/tex">p'</script> 上的一撇去掉，最后经过整个Boussinesq近似过程的方程如下：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\frac{du_1}{dt}-fu_2+\frac{1}{\rho_0}\frac{\partial p}{\partial x}=R_1 \\
+\frac{du_2}{dt}+fu_1+\frac{1}{\rho_0}\frac{\partial p}{\partial y}=R_2\\
+\frac{dw}{dt}+\frac{1}{\rho_0}\frac{\partial p}{\partial z}+\frac{\rho}{\overline{\rho}}g=R_3\\
+\nabla\cdot\pmb{u}=0 \\
+\frac{d\rho}{dt}+w\frac{d\overline{\rho}}{dz}=0 \\
+\end{cases}</script><h3 id="3、线性近似"><a href="#3、线性近似" class="headerlink" title="3、线性近似"></a>3、线性近似</h3><p>在之前的假定下我们进一步假设，在 <script type="math/tex">\frac{du}{dt}</script> 展开的散度项 <script type="math/tex">\vec{u}\cdot\nabla u</script> 项中，u为内波造成的速度场，量级较小，与 <script type="math/tex">\nabla u</script> 的乘积可以忽略，从而将方程线性化，得到简化方程如下：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\frac{\partial u_1}{\partial t}-fu_2+\frac{1}{\rho_0}\frac{\partial p}{\partial x}=R_1 \\
+\frac{\partial u_2}{\partial t}+fu_1+\frac{1}{\rho_0}\frac{\partial p}{\partial y}=R_2\\
+\frac{\partial w}{\partial t}+\frac{1}{\rho_0}\frac{\partial p}{\partial z}+\frac{\rho}{\overline{\rho}}g=R_3\\
+\nabla\cdot\pmb{u}=0 \\
+\frac{\partial\rho}{\partial t}+w\frac{d\overline{\rho}}{dz}=0 \\
+\end{cases}</script><ul>
+<li>特殊：在小扰动假定下我们将密度场和压强场看作背景场和内波扰动的叠加，所以在处理速度场是也可以做类似处理，只不过在之前的近似中，我们将背景流畅看作静止，速度完全由内波的扰动速度场组成。当考虑存在一个水平的背景速度场后，原速度变为 <script type="math/tex">\vec{U}+\vec{u}=[U(z)+u(x,y,z,t)]\vec{i}+[V(z)+v(x,y,z,t)]\vec{j}+w(x,y,z,t)\vec{k}</script> ，带入上述方程，方程组变为如下形式（忽略科氏力）：</li>
 </ul>
-<p>$$<br>\begin{cases}<br>\frac{D_0u}{Dt}+U’w+\frac{1}{\rho_0}\frac{\partial p}{\partial x}=R_1 \<br>\frac{D_0v}{Dt}+V’w+\frac{1}{\rho_0}\frac{\partial p}{\partial y}=R_2\<br>\frac{D_0w}{Dt}+\frac{1}{\rho_0}\frac{\partial p}{\partial z}+\frac{\rho}{\overline{\rho}}g=R_3\<br>\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}=0 \<br>\frac{D_0\rho}{Dt}+w\frac{d\overline{\rho}}{dz}=0 \<br>\end{cases}<br>$$</p>
-<p>其中， $$\frac{D_0}{Dt}=\frac{\partial}{\partial t}+U\frac{\partial}{\partial x}+V\frac{\partial}{\partial y}$$，$$U’=\frac{dU(z)}{dz}$$，$$V’=\frac{dV(z)}{dz}$$，这里需要注意的是，在进行线性近似的时候需要对方程重新近似，因为原来的散度项中，只有 $$\vec{u}\cdot\nabla u$$ 是小项，而 $$\vec{U}\cdot\nabla u$$ 项不是小项，故不能约去。</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\frac{D_0u}{Dt}+U'w+\frac{1}{\rho_0}\frac{\partial p}{\partial x}=R_1 \\
+\frac{D_0v}{Dt}+V'w+\frac{1}{\rho_0}\frac{\partial p}{\partial y}=R_2\\
+\frac{D_0w}{Dt}+\frac{1}{\rho_0}\frac{\partial p}{\partial z}+\frac{\rho}{\overline{\rho}}g=R_3\\
+\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}=0 \\
+\frac{D_0\rho}{Dt}+w\frac{d\overline{\rho}}{dz}=0 \\
+\end{cases}</script><p>其中， <script type="math/tex">\frac{D_0}{Dt}=\frac{\partial}{\partial t}+U\frac{\partial}{\partial x}+V\frac{\partial}{\partial y}</script>，<script type="math/tex">U'=\frac{dU(z)}{dz}</script>，<script type="math/tex">V'=\frac{dV(z)}{dz}</script>，这里需要注意的是，在进行线性近似的时候需要对方程重新近似，因为原来的散度项中，只有 <script type="math/tex">\vec{u}\cdot\nabla u</script> 是小项，而 <script type="math/tex">\vec{U}\cdot\nabla u</script> 项不是小项，故不能约去。</p>
 <p>uploaded on Oct.13.2020</p>
 
       
