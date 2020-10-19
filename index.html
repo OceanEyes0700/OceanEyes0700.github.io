@@ -165,13 +165,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/17/note3/">note3</a>
+      <a class="article-title" href="/2020/10/19/note3/">note3</a>
     </h1>
   
 
         
-        <a href="/2020/10/17/note3/" class="archive-article-date">
-  	<time datetime="2020-10-17T12:45:15.513Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-17</time>
+        <a href="/2020/10/19/note3/" class="archive-article-date">
+  	<time datetime="2020-10-19T09:02:03.975Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-19</time>
 </a>
         
 	
@@ -217,7 +217,68 @@
 <script type="math/tex; mode=display">
 w(x,y,z,t)=W(z)e^{i(k_1x_1+k_2x_2-\omega t)}</script><p>代入，可得非Boussinesq近似下的垂向本征方程：</p>
 <script type="math/tex; mode=display">
-\frac{d^2W}{d z^2}+\frac{N^2-\omega^2}{\omega^2-f^2}k_h^2W-\frac{N^2}{g}W'=0</script><p>uploaded on Oct.17.2020</p>
+W''+\frac{N^2-\omega^2}{\omega^2-f^2}k_h^2W-\frac{N^2}{g}W'=0</script><h3 id="3、仅考虑线性近似的本征方程"><a href="#3、仅考虑线性近似的本征方程" class="headerlink" title="3、仅考虑线性近似的本征方程"></a>3、仅考虑线性近似的本征方程</h3><p>当我们考虑真实的内波环境时，通常会采用不可压缩流体运动方程和考虑压缩性影响的浮性频率。这时，我们需要将控制方程组的近似条件进一步放宽，仅考虑线性近似下的状态方程组时，方程组呈如下形式：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\frac{\partial u}{\partial t}-fv+\tilde{f}w+\frac{1}{\overline\rho}\frac{\partial p}{\partial x}=0…………(1) \\
+\frac{\partial v}{\partial t}+fu+\frac{1}{\overline\rho}\frac{\partial p}{\partial y}=0…………(2) \\
+\frac{\partial w}{\partial t}-\tilde{f}u+\frac{1}{\overline\rho}\frac{\partial p}{\partial z}+\frac{\rho}{\overline{\rho}}g=0…………(3) \\
+\overline\rho\nabla\cdot\pmb{u}+w\frac{\partial\overline\rho}{\partial z}+\frac{\partial\rho}{\partial t}=0…………(4) \\
+w\frac{\partial\overline\rho}{\partial z}+\frac{\partial\rho}{\partial t}=\frac{1}{c_s^2}(-w\overline\rho g+\frac{\partial\rho}{\partial t})…………(5) \\
+\end{cases}</script><p>其中(4)式为原始的连续方程做了线性近似后的方程，并不是之前写成两个方程的形式，而(5)式则是将(4)式中的后两项通过声速定义 <script type="math/tex">\frac{\partial p}{\partial t}=c_s^2\frac{\partial\rho}{\partial t}</script> 进行变换得到的，这一变换的目的是将压缩性引入连续方程。根据之前的假设，我们做到了仅在连续方程中考虑可压缩性（考虑压缩性的浮性频率），而在运动方程中不考虑压缩性。</p>
+<p>与之前我们求W的本征方程的方法类似，接下来我们假设所有的扰动场均拥有以下的形式：</p>
+<script type="math/tex; mode=display">
+a(x_1,x_2,z,t)=A(z)e^{i(k_1x_1+k_2x_2-\omega t)}</script><p>其中a包括 <script type="math/tex">u、v、w、\rho、p</script> ，而A则为 <script type="math/tex">U、V、W、R、P</script> 。这样假设是因为不方便通过原方程直接化为单一变量方程，只能直接得出本征方程，具体原因后面会解释。当我们把这些变量代入上述方程组时，我们会得到如下方程组：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+-i\omega U-fV+\tilde{f}W+i\frac{k_1}{\overline\rho}P=0…………(6) \\
+-i\omega V+fU+i\frac{k_2}{\overline\rho}P=0…………(7) \\
+-i\omega W-\tilde{f}U+\frac{1}{\overline\rho}\frac{dP}{dz}+\frac{R}{\overline{\rho}}g=0…………(8) \\
+ik_1U+ik_2V+W'+\frac{1}{\overline\rho}W\frac{d\overline\rho}{dz}-\frac{1}{\overline{\rho}}i\omega g=0…………(9) \\
+W\frac{d\overline\rho}{dz}-i\omega R=-\frac{1}{c_s^2}(W\overline\rho g+i\frac{\omega}{c_s^2}P)…………(10) \\
+\end{cases}</script><p>将 <script type="math/tex">i\omega (6)-f(7)</script> ，得：</p>
+<script type="math/tex; mode=display">
+(\omega^2-f^2)U=-iw\tilde{f}W+(ifk_2+\omega k_1)\frac{P}{\overline\rho}=0
+\tag{11}</script><p>将 <script type="math/tex">f(6)+i\omega(7)</script> ，得：</p>
+<script type="math/tex; mode=display">
+(\omega^2-f^2)V=-f\tilde{f}W+(-ifk_1+\omega k_2)\frac{P}{\overline\rho}=0
+\tag{12}</script><p>有以上两式可以看出在这里当我们做了 <script type="math/tex">a(x_1,x_2,z,t)=A(z)e^{i(k_1x_1+k_2x_2-\omega t)}</script> 的近似后，原来的微分算子现在变成了系数乘在变量前，这样更加方便计算。并且这样做可以将微分算子和f项等同起来，做出上述两式的变换。</p>
+<p>在(10)式中出现了 <script type="math/tex">\frac{d\overline\rho}{dz}</script> 项，我们利用可压缩水团的浮性频率公式 <script type="math/tex">N^2=-(\frac{g}{\overline\rho}\frac{d\overline\rho}{dz}+\frac{g^2}{c_s^2})</script> 代入，可以得到：</p>
+<script type="math/tex; mode=display">
+R=\frac{P}{c_s^2}+i\frac{\overline\rho W}{\omega g}N^2
+\tag{13}</script><p>将以上(11)(12)(13)式代入(9)式中，将其中的U、V和R消去，得：</p>
+<script type="math/tex; mode=display">
+W'-(\frac{-\omega\tilde{f}k_1+if\tilde{f}k_2}{\omega^2-f^2}+\frac{g}{c_s^2})W+i\omega\frac{P}{\overline\rho}(\frac{k_1^2+k_2^2}{\omega^2-f^2}-\frac{1}{c_s^2})=0
+\tag{14}</script><p>将(11)(13)式代入(8)式中，将其中的U、R、<script type="math/tex">\frac{d\overline\rho}{dz}</script>消去，可得：</p>
+<script type="math/tex; mode=display">
+\frac{dP}{dz}=(\frac{\omega\tilde{f}k_1+if\tilde{f}k_2}{\omega^2-f^2}-\frac{g}{c_s^2})P+i\omega\overline\rho W(\frac{\omega^2-f^2+\tilde{f}^2}{\omega^2-f^2}-\frac{N^2}{\omega^2})
+\tag{15}</script><p>通过 <script type="math/tex">\frac{d}{dz}(\frac{P}{\overline\rho})=\frac{1}{\overline\rho}\frac{dP}{dz}-\frac{P}{\overline\rho^2}\frac{d\overline\rho}{dz}</script> 可以将(15)式再次变换，得到下面式子：</p>
+<script type="math/tex; mode=display">
+\frac{d}{dz}(\frac{P}{\overline\rho})=(\frac{\omega\tilde{f}k_1+if\tilde{f}k_2}{\omega^2-f^2}+\frac{N^2}{g})\frac{P}{\overline\rho}+i\omega W(\frac{\omega^2-f^2+\tilde{f}^2}{\omega^2-f^2}-\frac{N^2}{\omega^2})
+\tag{16}</script><p>进行如下变量定义：</p>
+<script type="math/tex; mode=display">
+A_1(z)=(\frac{\omega\tilde{f}k_1+if\tilde{f}k_2}{\omega^2-f^2}+\frac{N^2}{g})\\
+A_2(z)=i\omega(\frac{\omega^2-f^2+\tilde{f}^2}{\omega^2-f^2}-\frac{N^2}{\omega^2})\\
+A_3(z)=\frac{-\omega\tilde{f}k_1+if\tilde{f}k_2}{\omega^2-f^2}+\frac{g}{c_s^2})\\
+A_4(z)=-i\omega(\frac{k_1^2+k_2^2}{\omega^2-f^2}-\frac{1}{c_s^2})\\
+Q=\frac{P}{\overline\rho}</script><p>将(14)，(16)式联立，有：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\frac{dQ}{dz}=A_1Q+A_2W\\
+\frac{dW}{dz}=A_3W+A_4Q\\
+\end{cases}</script><p>下面的式子化为 <script type="math/tex">Q=\frac{W'-A_3W}{A_4}</script> 后带入上面的式子，可得：</p>
+<script type="math/tex; mode=display">
+W''-(A_1+A_3)W'+(A_1A_3-A_2A_4)W=0</script><p>将其中的参数代入，得到：</p>
+<script type="math/tex; mode=display">
+W''-(\frac{N^2}{g}+\frac{g}{c_s^2}+i\frac{2\tilde{f}fk_2}{\omega^2-f^2})W'+\frac{1}{\omega^2-f^2}[\tilde{f}^2k_2^2+k_h^2(N^2-\omega^2)-\omega\tilde{f}k_1(\frac{N^2}{g}-\frac{g}{c_s^2})+\omega^2(\omega^2-f^2-\tilde{f}^2)\frac{1}{c_s^2}+i\tilde{f}fk_2(\frac{N^2}{g}+\frac{g}{c_s^2})]W=0</script><p>对这个式子进行讨论：</p>
+<h4 id="（1）采用传统近似，不考虑压缩性，不采用Boussinesq近似"><a href="#（1）采用传统近似，不考虑压缩性，不采用Boussinesq近似" class="headerlink" title="（1）采用传统近似，不考虑压缩性，不采用Boussinesq近似"></a>（1）采用传统近似，不考虑压缩性，不采用Boussinesq近似</h4><p>此时 <script type="math/tex">\tilde{f}=0</script>，<script type="math/tex">\frac{1}{c_s^2}=0</script> ，原式变为：</p>
+<script type="math/tex; mode=display">
+W''-\frac{N^2}{g}W'+\frac{N^2-\omega^2}{\omega^2-f^2}k_h^2W=0</script><p>可以看出，这就是之前不考虑Boussinesq近似的垂向本征方程，其中 <script type="math/tex">N^2=-\frac{g}{\overline\rho}\frac{d\overline\rho}{dz}</script> 。</p>
+<h4 id="（2）-采用传统近似，考虑压缩性，不采用Boussinesq近似"><a href="#（2）-采用传统近似，考虑压缩性，不采用Boussinesq近似" class="headerlink" title="（2） 采用传统近似，考虑压缩性，不采用Boussinesq近似"></a>（2） 采用传统近似，考虑压缩性，不采用Boussinesq近似</h4><p>此时 <script type="math/tex">\tilde{f}=0</script>，<script type="math/tex">\frac{1}{c_s^2}\not=0</script> ，原式变为：</p>
+<script type="math/tex; mode=display">
+W''-(\frac{N^2}{g}+\frac{g}{c_s^2})W'+(\frac{N^2-\omega^2}{\omega^2-f^2}k_h^2+\frac{\omega^2}{c_s^2})W=0</script><p>这是考虑压缩性后的方程，其中 <script type="math/tex">N^2=-(\frac{g}{\overline\rho}\frac{d\overline\rho}{dz}+\frac{g^2}{c_s^2})</script> 。</p>
+<p>uploaded on Oct.17.2020</p>
+<p>updated on Oct.19.2020</p>
 
       
 
@@ -230,7 +291,7 @@ w(x,y,z,t)=W(z)e^{i(k_1x_1+k_2x_2-\omega t)}</script><p>代入，可得非Boussi
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/17/note3/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/10/19/note3/">展开全文 >></a>
         </p>
       
 
@@ -310,7 +371,7 @@ w(x,y,z,t)=W(z)e^{i(k_1x_1+k_2x_2-\omega t)}</script><p>代入，可得非Boussi
 <script type="math/tex; mode=display">
 \frac{\partial^2}{\partial t^2}[\frac{\partial}{\partial z}(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y})-(\frac{\partial^2 w}{\partial x^2}+\frac{\partial^2 w}{\partial y^2})]-f\frac{\partial}{\partial t}\frac{\partial}{\partial z}(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial z})=0 \tag{9}</script><p>借助式 (4)(5) 分别消掉含有水平速度和扰动密度的项，得到如下 <script type="math/tex">w</script> 应满足的方程：</p>
 <script type="math/tex; mode=display">
-\frac{\partial^2}{\partial t^2}(\nabla^2w)+N^2\nabla^2_h w +f^2\frac{\partial^2 w}{\partial z^2}=0</script><p>其中， <script type="math/tex">N^2=-\frac{g}{\overline{\rho_*}}\frac{d\overline{\rho}}{dz}</script> ，N为浮性频率，其表征在水质点在重力与浮力（即约化重力）共同作用的情况下震荡的频率，为固有频率。</p>
+\frac{\partial^2}{\partial t^2}(\nabla^2w)+N^2\nabla^2_h w +f^2\frac{\partial^2 w}{\partial z^2}=0</script><p>其中， <script type="math/tex">N^2=-\frac{g}{\overline{\rho_*}}\frac{d\overline{\rho}}{dz}</script> ，N为浮性频率，其表征在水质点在重力与浮力（即约化重力）共同作用的情况下震荡的频率，为固有频率。在这当中，我们一般认为背景密度场随深度的变化为已知量，这个量由N来体现。也就是说，N一般作为已知量出现在控制方程中，为了讨论方便，下面我们将其当成常量来处理。</p>
 <h3 id="2、本征方程的推导"><a href="#2、本征方程的推导" class="headerlink" title="2、本征方程的推导"></a>2、本征方程的推导</h3><p>在单一垂向速度场方程的基础上，可以对w变量场进行如下假设：首先，假设w变量是随时间的简谐波，将振幅分离，如下所示：</p>
 <script type="math/tex; mode=display">
 w(x,y,z,t)=\tilde w(x,y,z)e^{-i\omega t}</script><p>接下来，对于振幅，根据长时间的观测结果可以得到 <script type="math/tex">\tilde w(x,y,z)</script> 在不同垂向层的水平分布是大致一致的，因此可以进行如下假设：</p>
